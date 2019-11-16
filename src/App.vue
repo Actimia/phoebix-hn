@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
@@ -17,7 +13,21 @@
   color: #2c3e50;
 }
 
-#nav {
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
   padding: 30px;
 }
 
