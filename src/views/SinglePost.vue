@@ -1,6 +1,6 @@
 <template>
   <main class="single">
-    <Item :id="id" :level="0" :show-children="true"/>
+    <Item :id="id" :level="0" :show-children="true" :root="true"/>
   </main>
 </template>
 
@@ -11,6 +11,9 @@ export default {
   name: 'SinglePost',
   components: {
     Item,
+  },
+  metaInfo: {
+    title: ''
   },
   computed: {
     id () {
@@ -34,6 +37,7 @@ export default {
         margin-top: 0;
         padding: .5em;
         min-height: 3em;
+        justify-content: center;
         width: 100%;
         left: 0;
         right: 0;

@@ -13,6 +13,9 @@ export default {
   components: {
     Item,
   },
+  metaInfo: {
+    title: 'Better HN! · Phoebix'
+  },
   data () {
     return { limit: 25 }
   },

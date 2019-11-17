@@ -36,7 +36,17 @@ export default {
     showChildren: {
       type: Boolean,
       default: false
+    },
+    root: {
+      type: Boolean,
+      default: false
     }
+  },
+  metaInfo () {
+    if (this.root && this.item) {
+      return { title: (this.item.title || this.item.by) + ' · Phoebix' }
+    }
+    return {}
   },
   mounted () {
     this.$store.dispatch('getItem', this.id)

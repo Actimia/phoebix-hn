@@ -71,18 +71,14 @@ export default {
       flex-direction: column;
       align-items: center;
       margin-right: 1em;
-      width: 5em;
-      padding: .5em 0;
+      flex: 0 0 4rem;
+      padding: .5em;
       align-self: stretch;
       justify-content: center;
       border-radius: .5em;
       color: black;
       box-shadow: 2px 2px 4px var(--shadow);
       text-decoration: none;
-
-      @media (max-width: 600px) {
-        width: 4em;
-      }
 
       .score {
         font-weight: 800;
@@ -95,7 +91,7 @@ export default {
     }
 
     .info {
-      flex: 1;
+      flex: 0 1 55rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
