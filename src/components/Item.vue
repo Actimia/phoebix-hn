@@ -116,7 +116,7 @@ export default {
     .content {
       display: flex;
       flex-direction: column;
-      max-width: 100%;
+      max-width: var(--content-width);
       width: 100%;
     }
 

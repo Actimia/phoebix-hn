@@ -95,7 +95,7 @@ export default {
     }
 
     .info {
-      flex: 0 1 55rem;
+      flex: 0 1 calc(var(--content-width) - 4rem);
       display: flex;
       flex-direction: column;
       align-items: flex-start;

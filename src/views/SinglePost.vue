@@ -46,7 +46,7 @@ export default {
       > .itembody {
         margin-top: 5em;
         padding-right: 1em;
-        max-width: 60rem;
+        max-width: var(--content-width);
       }
 
     }
