@@ -1,4 +1,5 @@
-# hnapp3
+# Phoebix HN
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8bd338e0-5a71-4bef-96db-8f934937d028/deploy-status)](https://app.netlify.com/sites/phoebix/deploys)
 
 ## Project setup
 ```
