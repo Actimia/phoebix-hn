@@ -98,7 +98,7 @@ export default {
   .item {
     display: flex;
     flex-direction: row;
-    width: 80rem;
+    width: var(--content-width);
     max-width: 100%;
     margin-bottom: .5rem;
 
@@ -138,7 +138,7 @@ export default {
         text-align: left;
         font-size: 14px;
         line-height: 1.6;
-        width: 50rem;
+        width: var(--content-width);
         max-width: 100%;
 
       }
