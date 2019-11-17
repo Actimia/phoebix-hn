@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <RouterLink v-if="item.score" :to="'/'+item.id" class="meta" :style="scoreStyle">
+    <RouterLink v-if="item.score" :to="root ? '/' : '/' + item.id" class="meta" :style="scoreStyle">
       <div class="score">{{item.score}}p</div>
       <div class="comments">{{item.descendants}}c</div>
     </RouterLink>
@@ -24,7 +24,11 @@ import moment from 'moment'
 export default {
   name: 'ItemHeader',
   props: {
-    item: Object
+    item: Object,
+    root: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     domain () {

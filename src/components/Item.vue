@@ -5,7 +5,7 @@
       <span v-else>+</span>
     </div>
     <div class="content">
-      <ItemHeader :item="item"/>
+      <ItemHeader :item="item" :root="root"/>
       <div class="itembody" v-if="open">
         <div class="text" v-if="item.text && open" v-html="item.text"/>
         <div v-if="kids.length" class="children">
@@ -100,12 +100,10 @@ export default {
     flex-direction: row;
     width: 80rem;
     max-width: 100%;
-    /*align-items: stretch;*/
     margin-bottom: .5rem;
 
     .expando {
       width: 1.1rem;
-      /*border: 1px solid red;*/
       border-left: 4px solid var(--primary);
       margin-right: .2rem;
       padding-top: .4rem;
@@ -118,8 +116,8 @@ export default {
     .content {
       display: flex;
       flex-direction: column;
-      /*align-items: stretch;*/
       max-width: 100%;
+      width: 100%;
     }
 
     &:not(.level-0) .content {
@@ -147,7 +145,6 @@ export default {
 
       .children {
         display: flex;
-        /*align-self: stretch;*/
         flex-direction: column;
         padding-top: 1em;
         align-items: flex-start;
