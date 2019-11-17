@@ -35,6 +35,10 @@ export default {
 
 <style scoped>
   .homepage {
-    padding: 1em;
+    padding: .5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
   }
 </style>

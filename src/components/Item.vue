@@ -96,12 +96,12 @@ export default {
     .expando {
       width: 1.1rem;
       /*border: 1px solid red;*/
-      border-left: 4px solid cornflowerblue;
+      border-left: 4px solid var(--primary);
       margin-right: .2rem;
       padding-top: .4rem;
 
       &:hover {
-        background: linear-gradient(to right, cornflowerblue, white);
+        background: linear-gradient(to right, var(--primary), var(--background));
       }
     }
 
@@ -147,7 +147,7 @@ export default {
       .load {
         font-size: .8rem;
         padding-left: 1rem;
-        border-left: 4px solid cornflowerblue;
+        border-left: 4px solid var(--primary);
         cursor: pointer;
       }
     }

@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <RouterLink v-if="item.score" :to="'/'+item.id" class="meta" :style="scoreStyle">
-      <div class="score">{{item.score}}</div>
-      <div class="comments">{{item.descendants}}</div>
+      <div class="score">{{item.score}}p</div>
+      <div class="comments">{{item.descendants}}c</div>
     </RouterLink>
     <div class="info">
       <a v-if="item.url" class="title" :href="item.url" target="_blank">
@@ -10,7 +10,7 @@
       </a>
       <div class="extrainfo">
         by <span class="author">{{item.by}}</span>
-        &nbsp;<time :datetime="item.time" class="timestamp">{{timestamp}}</time>
+        &nbsp;<RouterLink :to="'/'+item.id" class="timestamp"><time :datetime="item.time">{{timestamp}}</time></RouterLink>
         &nbsp;<span v-if="this.item.url" class="domain"> from {{domain}}</span>
       </div>
     </div>
@@ -39,8 +39,9 @@ export default {
 
       const factor = x => 1 - Math.exp(-x / 150)
 
-      const color0 = Color('white')
-      const color1000 = Color('cornflowerblue')
+      const style = getComputedStyle(document.documentElement)
+      const color0 = Color(style.getPropertyValue('--secondary').trim())
+      const color1000 = Color(style.getPropertyValue('--primary').trim())
 
       const scoreColor = color0.mix(color1000, factor(points))
       const commentColor = color0.mix(color1000, factor(comments))
@@ -72,10 +73,16 @@ export default {
       margin-right: 1em;
       width: 5em;
       padding: .5em 0;
+      align-self: stretch;
+      justify-content: center;
       border-radius: .5em;
       color: black;
-      box-shadow: 2px 2px 4px gray;
+      box-shadow: 2px 2px 4px var(--shadow);
       text-decoration: none;
+
+      @media (max-width: 600px) {
+        width: 3em;
+      }
 
       .score {
         font-weight: 800;
@@ -83,6 +90,7 @@ export default {
       }
 
       .comments {
+        font-weight: 500;
       }
     }
 
@@ -119,6 +127,15 @@ export default {
 
       .author {
         font-weight: bold;
+      }
+
+      .timestamp {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .domain {
+        font-weight: 500;
       }
     }
   }

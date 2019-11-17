@@ -21,26 +21,36 @@ export default {
 </script>
 
 <style>
-  .single > .item > .content {
-    > .header {
-      position: fixed;
-      background: white;
-      border-bottom: 2px solid cornflowerblue;
-      box-shadow: 0 0 4px grey;
-      margin-top: 0;
-      padding: .5em;
-      width: 100%;
-    }
+  .single > .item {
+    width: 100%;
+    justify-content: center;
 
-    > .itembody {
-      margin-top: 5em;
-      padding: 0 1em;
+    > .content {
+      > .header {
+        position: fixed;
+        background: var(--background);
+        border-bottom: 2px solid var(--primary);
+        box-shadow: 0 0 4px var(--shadow);
+        margin-top: 0;
+        padding: .5em;
+        min-height: 3em;
+        width: 100%;
+        left: 0;
+        right: 0;
+      }
+
+      > .itembody {
+        margin-top: 5em;
+        padding: 0 1em;
+        max-width: 60rem;
+      }
+
     }
   }
 </style>
 
 <style scoped>
-  main{
+  main {
     display: flex;
     flex-direction: column;
     width: 100%;

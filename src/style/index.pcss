@@ -1,0 +1,47 @@
+@supports (font-variation-settings: normal) {
+    @font-face {
+        font-family: 'League Spartan';
+        font-weight: 100 900;
+        src: url('./fonts/LeagueSpartanVariable.woff2') format('woff2-variations');
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text);
+    background: var(--background);
+
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary);
+}
+
+:root {
+    --primary: cornflowerblue;
+    --secondary: white;
+    --text: #2c3e50;
+    --background: #f8f8f8;
+    --shadow: grey;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: cornflowerblue;
+        --text: #ccc;
+        --background: #333;
+        --shadow: black;
+    }
+}
