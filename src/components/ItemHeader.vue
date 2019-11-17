@@ -81,7 +81,7 @@ export default {
       text-decoration: none;
 
       @media (max-width: 600px) {
-        width: 3em;
+        width: 4em;
       }
 
       .score {
