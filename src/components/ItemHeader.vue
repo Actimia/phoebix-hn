@@ -74,7 +74,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-right: 1em;
+      margin-right: 1rem;
       flex: 0 0 4rem;
       padding: .5em;
       align-self: stretch;
@@ -95,7 +95,7 @@ export default {
     }
 
     .info {
-      flex: 0 1 calc(var(--content-width) - 4rem);
+      flex: 0 1 calc(var(--content-width) - 5rem);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
